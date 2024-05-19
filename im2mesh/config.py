@@ -1,7 +1,7 @@
 import yaml
 from torchvision import transforms
 from im2mesh import data
-from im2mesh import onet, r2n2, psgn, pix2mesh, dmc
+from im2mesh import onet, r2n2, psgn, pix2mesh
 from im2mesh import preprocess
 
 
@@ -10,7 +10,6 @@ method_dict = {
     'r2n2': r2n2,
     'psgn': psgn,
     'pix2mesh': pix2mesh,
-    'dmc': dmc,
 }
 
 
@@ -24,7 +23,7 @@ def load_config(path, default_path=None):
     '''
     # Load configuration from file itself
     with open(path, 'r') as f:
-        cfg_special = yaml.load(f)
+        cfg_special = yaml.load(f, Loader=yaml.FullLoader)
 
     # Check if we should inherit from a config
     inherit_from = cfg_special.get('inherit_from')
@@ -35,7 +34,7 @@ def load_config(path, default_path=None):
         cfg = load_config(inherit_from, default_path)
     elif default_path is not None:
         with open(default_path, 'r') as f:
-            cfg = yaml.load(f)
+            cfg = yaml.load(f, Loader=yaml.FullLoader)
     else:
         cfg = dict()
 

@@ -64,6 +64,8 @@ True
 """
 
 import numpy as np
+np.int = int
+np.bool = bool
 
 class Voxels(object):
     """ Holds a binvox model.

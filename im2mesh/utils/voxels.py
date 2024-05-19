@@ -6,7 +6,8 @@ from skimage.measure import block_reduce
 from im2mesh.utils.libvoxelize.voxelize import voxelize_mesh_
 from im2mesh.utils.libmesh import check_mesh_contains
 from im2mesh.common import make_3d_grid
-
+np.int = int
+np.bool = bool
 
 class VoxelGrid:
     def __init__(self, data, loc=(0., 0., 0.), scale=1):
