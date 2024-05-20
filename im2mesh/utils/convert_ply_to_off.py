@@ -28,3 +28,4 @@ if __name__ == "__main__":
     output_directory = sys.argv[2]
 
     convert_ply_to_off(input_directory, output_directory)
+    sys.exit(0)

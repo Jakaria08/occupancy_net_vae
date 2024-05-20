@@ -10,7 +10,7 @@ from functools import partial
 sys.path.append('..')
 from im2mesh.utils import binvox_rw, voxels
 from im2mesh.utils.libmesh import check_mesh_contains
-
+#python sample_mesh.py <path_containing_existing_off_file> --voxels_folder <output_folder> --points_folder <output_folder>
 
 parser = argparse.ArgumentParser('Sample a watertight mesh.')
 parser.add_argument('in_folder', type=str,
