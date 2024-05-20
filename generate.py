@@ -9,7 +9,7 @@ from collections import defaultdict
 import pandas as pd
 from im2mesh import config
 from im2mesh.checkpoints import CheckpointIO
-from im2mesh.utils.io import export_pointcloud
+from im2mesh.utils.io_file import export_pointcloud
 from im2mesh.utils.visualize import visualize_data
 from im2mesh.utils.voxels import VoxelGrid
 

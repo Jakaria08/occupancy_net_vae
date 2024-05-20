@@ -7,7 +7,7 @@ import trimesh
 import torch
 from im2mesh import config, data
 from im2mesh.eval import MeshEvaluator
-from im2mesh.utils.io import load_pointcloud
+from im2mesh.utils.io_file import load_pointcloud
 
 
 parser = argparse.ArgumentParser(
